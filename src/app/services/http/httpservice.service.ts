@@ -6,7 +6,8 @@ import { environment } from '../../../environments/environment'
   providedIn: 'root'
 })
 export class HttpserviceService {
- Baseurl = environment.baseUrl;
+
+ baseurl = environment.baseUrl;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,7 +29,18 @@ Post(url: any, data: any, token: any){
       'Accept': 'application/json'
     })
   }
- return this.httpClient.post(this.Baseurl + url, this.encode(data), options);
+ return this.httpClient.post(this.baseurl + url, this.encode(data), options);
+}
+
+get(url: any,id: any){
+  let options = {
+    headers: new HttpHeaders({
+      'Authorization': id,
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Accept': 'application/json'
+    })
+  }
+  return this.httpClient.get(this.baseurl+url,options)
 }
 
 }

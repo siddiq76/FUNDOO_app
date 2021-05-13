@@ -22,7 +22,16 @@ export class UserService {
   }
 
   resetService(data : any,token : any){
-    return this.http.Post('user/reset-password',data,token)
+    return this.http.Post('user/reset-password',data,token);
+  }
+
+  createNote(data: any , id: any){
+    return this.http.Post('notes/addNotes',data,id);
+
+  }
+
+  getNoteList(id:any){
+    return this.http.get('notes/getNotesList',id)
   }
   
 }

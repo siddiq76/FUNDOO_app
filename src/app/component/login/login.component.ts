@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   submit() {
     if (this.form.valid) {
       console.log(this.form.value.email);
+      let arr = [] as any;
       let reqObj = {
                     email: this.form.value.email,
                     password: this.form.value.password
@@ -29,6 +30,9 @@ export class LoginComponent implements OnInit {
       console.log(reqObj);
       this.userService.loginService(reqObj).subscribe ((res) =>{
         console.log(res);
+        arr= res;
+        console.log(arr.id);
+        localStorage.setItem('id',arr.id);
       },(error) =>{
         console.log(error);
       })                     
