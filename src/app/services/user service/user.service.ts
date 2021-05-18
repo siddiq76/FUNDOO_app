@@ -93,5 +93,17 @@ export class UserService {
     }
     return this.http.Post('notes/trashNotes',data,options);
   }
+
+  logout(id : any){
+    let options = {
+      headers: new HttpHeaders({
+        'Authorization': id,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      })
+    }
+    return this.http.Post('notes/logout',"",options);
+
+  }
   
 }

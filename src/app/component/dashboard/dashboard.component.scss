@@ -1,13 +1,27 @@
-// .header{
-//     background-color: white;
-//     border-radius: 2px;
-//     border-bottom: 2px;
-//     // border-color: black;
-//     padding: 40 40 40 40;
-// }
+.header{
+    background-color: white;
+    border-bottom: 1px solid gray; 
+    padding: 40 40 40 40;
+}
 
-// .bars{
-//     background-color: whitesmoke;
-//     height : 36px;
-//     width: 36px; 
-// }
+.bars{
+    height : 30px;
+    width: 30px;
+}
+
+.title{
+    color:grey;
+}
+
+.keep{
+    color:black;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+
+}
+
+input{
+    width: 700px;
+    height: 30px;
+}

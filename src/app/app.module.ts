@@ -15,6 +15,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { DisplayComponent } from './component/display/display.component';
+import { CreateNoteComponent } from './component/create-note/create-note.component';
+import { GetallnoteComponent } from './component/getallnote/getallnote.component';
+import { TrashComponent } from './component/trash/trash.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { DisplayComponent } from './component/display/display.component';
     ResetPasswordComponent,
     FundooheaderComponent,
     DashboardComponent,
-    DisplayComponent
+    DisplayComponent,
+    CreateNoteComponent,
+    GetallnoteComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,
